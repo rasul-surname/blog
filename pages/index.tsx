@@ -1,5 +1,5 @@
 import React from "react";
-import { Head } from "../node_modules/next/document";
+import Head from "../node_modules/next/head";
 
 function Home() {
     return (

@@ -1,6 +1,5 @@
 import React from "react";
 import { AppProps } from "../node_modules/next/app";
-
 import Header from "../components/Header";
 
 import "../styles/reset.css";
