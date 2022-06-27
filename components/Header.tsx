@@ -2,7 +2,7 @@ import React from "react";
 import useChecked from "../hooks/use-checked";
 import useTheme from "../hooks/use-theme";
 import Image from "../node_modules/next/image";
-import logo from "../public/logo.png";
+import logo from "../public/images/logo.png";
 import styles from "./Header.module.css";
 
 export default function Header() {

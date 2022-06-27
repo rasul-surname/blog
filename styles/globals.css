@@ -3,8 +3,9 @@
 :root {
     --white: #ffffff;
     --black: #000000;
-    --black-gray: #353732;
     --gray: #45525b;
+    --white-gray: #CCCCCC;
+    --black-gray: #353732;
 
     --font-family-primary: "Open Sans", sans-serif;
     --font-family-secondary: "Montserrat", sans-serif;
@@ -12,19 +13,25 @@
     --font-size-primary: 18px;
     --font-size-secondary: 12px;
 
-    --border: 1px solid #dcdcdc;
+
     --border-radius: 8px;
 }
 
 /* Dark Theme styles start */
 html[data-theme="dark"] {
     --background-color: #282c35;
+    --background-color-card: #3D4351;
+
+    --border-card: 1px solid #6A6A6A;
 }
 /* Dark Theme styles end */
 
 /* Light Theme styles start */
 html[data-theme="light"] {
     --background-color: #fafafa;
+    --background-color-card: #ffffff;
+
+    --border-card: 1px solid #dcdcdc;
 }
 /* Light Theme styles end */
 
@@ -34,8 +41,9 @@ body {
 }
 
 .wrapper {
-    width: 800px;
-    height: calc(100vh - 160px);
+    max-width: 830px;
+    width: 100%;
+    min-height: calc(100vh - 160px);
 
     margin: 20px auto;
     padding: 0px 15px;
