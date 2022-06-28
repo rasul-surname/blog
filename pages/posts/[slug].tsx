@@ -1,13 +1,22 @@
 import React from "react";
+
 import fs from 'fs';
 import path from 'path';
 import matter from "gray-matter";
 import {marked} from "marked";
+import styles from './PostPage.module.css';
 
-const PostPage = ({content}) => {
+const PostPage = ({frontMatter, slug, content}) => {
 
     return (
-        <div dangerouslySetInnerHTML={{__html: marked(content)}}></div>
+        <div className={styles.content}>
+            <div className={styles.content__header}>
+                <img className={styles.content__header__img} src={frontMatter.cover_image} alt=""/>
+                <p className={styles.content__header__title}>{frontMatter.title}</p>
+                <p className={styles.content__header__date}>{frontMatter.date}</p>
+            </div>
+            <div className={styles.content__main} dangerouslySetInnerHTML={{__html: marked(content)}}></div>
+        </div>
     )
 }
 

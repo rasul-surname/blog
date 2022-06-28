@@ -9,18 +9,17 @@
 
     --font-family-primary: "Open Sans", sans-serif;
     --font-family-secondary: "Montserrat", sans-serif;
-
-    --font-size-primary: 18px;
-    --font-size-secondary: 12px;
-
-
-    --border-radius: 8px;
 }
 
 /* Dark Theme styles start */
 html[data-theme="dark"] {
+    --white: #000000;
+    --black: #ffffff;
+
+    --inline-code: #373C49;
+
     --background-color: #282c35;
-    --background-color-card: #3D4351;
+    --background-color-card: #373C49;
 
     --border-card: 1px solid #6A6A6A;
 }
@@ -28,6 +27,11 @@ html[data-theme="dark"] {
 
 /* Light Theme styles start */
 html[data-theme="light"] {
+    --white: #ffffff;
+    --black: #000000;
+
+    --inline-code: #FFF7CC;
+
     --background-color: #fafafa;
     --background-color-card: #ffffff;
 
@@ -45,8 +49,12 @@ body {
     width: 100%;
     min-height: calc(100vh - 160px);
 
-    margin: 20px auto;
+    margin: 40px auto 20px;
     padding: 0px 15px;
+}
 
-    border: 1px solid black;
+@media (max-width: 600px) {
+    .wrapper {
+        margin: 20px auto 20px;
+    }
 }

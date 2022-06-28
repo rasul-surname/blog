@@ -1,4 +1,5 @@
 import React from "react";
+import Link from "next/link";
 import useChecked from "../hooks/use-checked";
 import useTheme from "../hooks/use-theme";
 import Image from "../node_modules/next/image";
@@ -17,9 +18,14 @@ export default function Header() {
     return (
         <header className={styles.wrapper}>
             <div className={styles.container}>
-                <div className={styles.logo}>
-                    <Image src={logo} alt="logo" placeholder="blur" />
-                </div>
+                <Link href="/">
+                    <div className={styles.logo}>
+                        <div className={styles.logo__img}>
+                            <Image src={logo} alt="logo" placeholder="blur" />
+                        </div>
+                        <p  className={styles.logo__text}>Личный блог <br/> Frontend разработчика</p>
+                    </div>
+                </Link>
                 <div className={styles.toggle}>
                     <input
                         onClick={toggleTheme}

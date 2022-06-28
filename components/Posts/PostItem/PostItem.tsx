@@ -8,7 +8,10 @@ const PostItem = ({ post }) => {
             <div className={styles.card}>
                 <img className={styles.card__img} src={post.frontMatter.cover_image} alt="" />
                 <div className={styles.card__text}>
-                    <p className={styles.card__text__title}>{post.frontMatter.title}</p>
+                    <div>
+                        <p className={styles.card__text__title}>{post.frontMatter.title}</p>
+                        <p className={styles.card__text__desc}>{post.frontMatter.desc}</p>
+                    </div>
                     <p className={styles.card__text__date}>{post.frontMatter.date}</p>
                 </div>
             </div>
